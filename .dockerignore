@@ -1,0 +1,11 @@
+# Exclude translate module
+R/mod_translate.R
+R/fct_translate.R
+R/utils_translate.R
+
+# Exclude directories
+data_raw/
+data_pdf/
+
+# Exclude other files
+*.md

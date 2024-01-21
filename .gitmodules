@@ -1,0 +1,3 @@
+[submodule "languager"]
+	path = languager
+	url = https://github.com/LukasBlohm/languager.git
