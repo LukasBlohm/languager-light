@@ -19,6 +19,7 @@ RUN R -e "install.packages(c('bslib', 'config', 'dplyr', 'forcats', 'golem', 'lu
 # Run R script to remove dependencies from DESCRIPTION file
 RUN Rscript adjust_description.R restricted=TRUE
 
-EXPOSE 3838
+# Expose dynamic port
+EXPOSE $PORT
 
-CMD R -e "options('shiny.port'=3838,shiny.host='0.0.0.0');source('app.R');languager::run_app(translator=FALSE)"
+CMD R -e "options(shiny.host='0.0.0.0');source('app.R');languager::run_app(translator=FALSE)"
